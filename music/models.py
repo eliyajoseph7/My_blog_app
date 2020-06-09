@@ -24,7 +24,7 @@ class Post(models.Model):
     video_url       = models.URLField(max_length=500, blank=True)
     slug            = models.SlugField(default='', blank=True, max_length=40, unique=True)
     # image           = models.ImageField(upload_to='post_images')
-    image           = models.URLField(max_length=500)
+    image           = models.URLField(max_length=1000)
     date            = models.DateField(auto_now=True)
     author          = models.ForeignKey(Author, on_delete=models.CASCADE)
     # image_thumbnail = ImageSpecField(source='image',
