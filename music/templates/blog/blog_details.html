@@ -39,10 +39,13 @@
 
             <blockquote class="blockquote">
                 <p class="mb-0 mt-3"> </p>Written by: {{object.author}} on {{object.date}}
-                <footer class="blockquote-footer w-100">The information source is:<br />{% for info in infoSources %} {% if info %}
+                <footer class="blockquote-footer w-100">The information source is:<br />
+                    <div class="col-md-12">
+                        {% for info in infoSources %} {% if info %}
+                        <i class="fa fa-angle-right"></i> <cite title="{{object.title}}"><a href="{{info.info_source}}" target="_blank">{{info.info_source}}</a></cite>
+                        <br /> {% endif %}{% endfor %}
+                    </div>
 
-                    <i class="fa fa-angle-right"></i> <cite title="{{object.title}}"><a href="{{info.info_source}}" target="_blank">{{info.info_source}}</a></cite>
-                    <br /> {% endif %}{% endfor %}
                 </footer>
             </blockquote>
 
