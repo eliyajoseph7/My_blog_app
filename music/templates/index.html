@@ -12,7 +12,7 @@
             </div>
             <div class="col-lg-8 align-self-baseline">
                 <p class="text-white-75 font-weight-light mb-5">Here you will get to know and hear the history of powerful gospel praise and worship songs written long time ago and more others</p>
-                <a class="btn btn-primary btn-xl js-scroll-trigger" href="/blog-home">Find Out More</a>
+                <a class="btn btn-primary btn-xl js-scroll-trigger" href="{% url 'blog-home' %}">Find Out More</a>
             </div>
         </div>
     </div>
@@ -85,7 +85,7 @@
         <div class="container">
             <div class="row justify-content-center no-gutters">
                 <div class="col-lg-6 tv">
-                    <a href="/etv " target="_blank ">
+                    <a href="{% url 'emmanuel' %}" target="_blank ">
                         <img src="{% static 'img/emmanuel.png' %} " class="emmanuel h-100 img-fluid" alt=" ">
                         <img src="{% static 'img/etv.png' %} " class="etv h-100 img-fluid" alt=" ">
                     </a>
@@ -96,7 +96,7 @@
                             <div class="project-text w-100 my-auto text-center text-lg-right">
                                 <h5 class="text-white">Looking for a christian channel?</h5>
                                 <p class="mb-0 text-white-50">Watch EmmanuelTv live from lagos Nigeria. <br /><em>Changing Lives, Changing Nations, changing the World</em></p>
-                                <a class="btn btn-primary btn-xs js-scroll-trigger" href="/etv">watch</a>
+                                <a class="btn btn-primary btn-xs js-scroll-trigger" href="{% url 'emmanuel' %}">watch</a>
                                 <hr class="d-none d-lg-block mb-0 mr-0">
                             </div>
                         </div>

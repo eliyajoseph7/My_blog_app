@@ -4,7 +4,7 @@
 <div class="container contents bg-light">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
             <li class="breadcrumb-item active" aria-current="page">Words of wisdom</li>
         </ol>
     </nav>
@@ -69,7 +69,7 @@
                     <div style="display:inline;" class="float-left"><img src="{%  static 'assets/img/me.jpg' %}" style="width: 3rem; height: 3rem; border-radius: 100%;" /></div>
 
                     <p>{{context.intro | truncatewords:10}} </p>
-                    <a href="/about-me" class="btn btn-outline-info">view more</a>
+                    <a href="{% url 'about' %}" class="btn btn-outline-info">view more</a>
                 </div>
             </div>
             <div>

@@ -17,23 +17,11 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from music import views as view
-import music
 
 
-extra_patterns = [
-    path('blog-details/<slug:the_slug>', view.blog_info),
-    
-] 
 
 urlpatterns = [
-    path('', view.index),
-    path('blog-home', view.blog_home),
-    path('test', view.blog_home),
-    path('words', view.words),
-    path('', include(extra_patterns), name="view_info"),
-    path('etv', view.emmanuel_tv),
-    path('about-me', view.aboutMe),
+    path('', include('music.urls')),
     path('admin/', admin.site.urls),
     
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
